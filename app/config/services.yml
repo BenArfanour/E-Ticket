@@ -1,0 +1,12 @@
+parameters:
+
+services:
+
+     SetNewReference:
+          class: AppBundle\Services\getReference
+          arguments: [@security.context, @doctrine.orm.entity_manager]
+
+     redirect.after.login:
+
+             class: AppBundle\Redirection\AfterLogin
+             arguments: ["@router"]

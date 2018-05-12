@@ -1,0 +1,33 @@
+{% extends '::admin.html.twig' %}
+
+{% block body %}
+    <h1>Page </h1>
+
+    <table class="table-striped">
+
+        <tr>
+            <td>ID</td>
+            <td>{{ entity.id }}</td>
+        </tr>
+        <tr>
+            <td>Titre</td>
+            <td>{{ entity.titre }}</td>
+        </tr>
+        <tr>
+            <td>Contenu</td>
+            <td>{{ entity.contenu }}</td>
+        </tr>
+
+    </table>
+
+ <center>
+            <a href="{{ path('adminPages') }}">
+                Retour
+            </a> <br> <br>
+
+        {{ form(delete_form) }}
+
+ </center>
+
+
+{% endblock %}

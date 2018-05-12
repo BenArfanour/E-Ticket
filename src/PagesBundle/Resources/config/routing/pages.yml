@@ -1,0 +1,37 @@
+adminPages:
+    path:     /
+    defaults: { _controller: "PagesBundle:Pages:index" }
+    methods:  GET
+
+adminPages_show:
+    path:     /{id}/show
+    defaults: { _controller: "PagesBundle:Pages:show" }
+    methods:  GET
+
+adminPages_new:
+    path:     /new
+    defaults: { _controller: "PagesBundle:Pages:new" }
+    methods:  [GET, POST]
+
+adminPages_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "PagesBundle:Pages:edit" }
+    methods:  [GET, POST]
+
+adminPages_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "PagesBundle:Pages:delete" }
+    methods:  DELETE
+
+adminPages_create:
+    path:  /create
+    defaults: { _controller: "PagesBundle:Pages:create" }
+    methods:  POST
+
+adminPages_update:
+    path:  /{id}/update
+    defaults: { _controller: "PagesBundle:Pages:update" }
+    methods : [POST,PUT]
+
+
+

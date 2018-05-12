@@ -1,0 +1,79 @@
+<html>
+<head>
+    <title>E-Ticket !</title>
+    <meta http-equiv="Content-type" charset="utf-8">
+    {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}" />
+        <link rel="stylesheet" href="{{ asset('css/bootstrap-responsive.css') }}" />
+        <link rel="stylesheet" href="{{ asset('css/style.css') }}" />
+        <link rel="stylesheet" href="{{ asset('css/font-awesome.css') }}" />
+
+    {% endblock %}
+
+
+</head>
+
+<body>
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <button class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse" type="button">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="brand" href="{{ path('homepage') }}">E-Ticket !</a>
+            <div class="nav-collapse collapse">
+                {% render(controller('AppBundle:Produit1:recherche')) %}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% block body %} {% endblock %}
+
+
+
+
+</body>
+
+<hr />
+
+<footer id="footer" class="vspace20">
+    <div class="container">
+        <div class="row">
+            <div class="span4 offset1">
+                <h4>Informations</h4>
+                <ul class="nav nav-stacked">
+                    {% render(controller('PagesBundle:Pages1:Menu')) %}
+
+                </ul>
+            </div>
+
+            <div class="span4">
+                <h4>Notre entrepôt</h4>
+                <p><i class="icon-map-marker"></i> {{ adresse }}</p>
+            </div>
+
+            <div class="span2">
+                <h4>Nous contacter</h4>
+                <p><i class="icon-phone"></i>&nbsp;{{ telephone }}</p>
+                <p><i class="icon-print"></i>&nbsp;{{ fax }}</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="span4">
+                <p>&copy; Copyright {{ "now"|date('Y') }} - FSB</p>
+            </div>
+        </div>
+    </div>
+</footer>
+{% block javascript %}
+<script src="{{ asset('js/jquery-1.10.0.min.js') }}"></script>
+<script src="{{ asset('js/bootstrap.js') }}"></script>
+
+{% endblock %}
+
+</html>
+

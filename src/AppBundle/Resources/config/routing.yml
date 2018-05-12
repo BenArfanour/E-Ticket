@@ -1,0 +1,34 @@
+produit_adminProduit:
+    resource: "@AppBundle/Resources/config/routing/produit.yml"
+    prefix:   /admin/produit
+
+app_adminCategorie:
+    resource: "@AppBundle/Resources/config/routing/categorie.yml"
+    prefix:   /admin/categorie
+
+factures:
+    path:    /profile/facture
+    defaults: {_controller: AppBundle:Utilisateur:Facture}
+
+
+facturePDF:
+    path:    /profile/facture/pdf/{id}
+    defaults: {_controller: AppBundle:Utilisateur:facturesPDF}
+
+commandesAffiche:
+    path:   /admin/commandes
+    defaults: {_controller: AppBundle:Commandes:affiche}
+
+
+AnnulerCommande:
+    path:   /admin/annulerCommande/{id}
+    defaults: {_controller: AppBundle:Commandes:annuler}
+
+
+ActiveUser:
+    path:   /admin/active/{id}
+    defaults: {_controller: AppBundle:Utilisateur:active}
+
+desActiveUser:
+    path:   /admin/desactive/{id}
+    defaults: {_controller: AppBundle:Utilisateur:desactive}

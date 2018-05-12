@@ -1,0 +1,11 @@
+parameters:
+ 
+
+services:
+        fos_user.doctrine_registry:
+                alias: doctrine
+
+
+       redirect.after.login:
+            class: AppBundle\Redirection\AfterLogin
+            arguments : [@router]

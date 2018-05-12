@@ -1,0 +1,19 @@
+{% extends '::admin.html.twig' %}
+
+{% block body %}
+
+        <h1>Ajouter un produit</h1>
+
+        {{ form(form) }}
+   <center>
+       {{ form_row(form.submit)}}
+   </center>
+
+        <ul class="record_actions">
+            <li>
+                <a href="{{ path('produit_index') }}">
+                    Retour
+                </a>
+            </li>
+        </ul>
+{% endblock %}
